@@ -7,13 +7,10 @@ module testbench();
     wire [15:0] s;
     wire co;
     
-    // instantiation
-    
     Addersub p(a, b, M, s, co);
-
     initial begin
         $dumpfile("Add_sub.vcd");
-        $dumpvars(0, testbench); // Corrected module name
+        $dumpvars(0, testbench);
 
         M = 0;
         a = 16'd0;
